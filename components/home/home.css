@@ -1,0 +1,63 @@
+body{
+    margin: 0;
+}
+
+.home{
+    height: 100vh;
+    background-color: greenyellow;
+}
+
+.header{
+    height: 25vh;
+    background-color: green;
+    display: flex;
+}
+
+.profilephoto{
+    background-color: hotpink;
+    height: 25vh;
+    width: 10%;
+    position: absolute;
+    left: 40%;
+}
+
+.name{
+    position: absolute;
+    left: 55%;
+    margin-top: 10vh;
+    padding: 10px 10px;
+    background-color: indianred;
+}
+
+.heading1{
+    position: absolute;
+    left: 55%;
+    margin-top: 16vh;
+    padding: 10px 10px;
+    background-color: indianred;
+}
+
+.login{
+    position: absolute;
+    top: 10vh;
+    right: 5%;
+    padding: 0px 10px;
+    background-color: indianred;
+}
+
+.function{
+    display: flex;
+    height: 75vh;
+}
+
+.search{
+    height: 75vh;
+    width: 50%;
+    background-color: indigo;
+}
+
+.update{
+    height: 75vh;
+    width: 50%;
+    background-color: rgb(179, 120, 221);
+}
