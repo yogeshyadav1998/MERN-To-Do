@@ -1,63 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script:wght@700&display=swap');
+
 body{
     margin: 0;
 }
 
+img{
+    height: 100%;
+    width: 100%;
+}
+
 .home{
     height: 100vh;
-    background-color: greenyellow;
+    background-color: black;
 }
 
-.header{
-    height: 25vh;
-    background-color: green;
-    display: flex;
-}
-
-.profilephoto{
-    background-color: hotpink;
-    height: 25vh;
-    width: 10%;
+.content{
     position: absolute;
-    left: 40%;
+    top: 0;
+    z-index: 1;
+}
+
+.background-video{
+    position: relative;
+    top: 0;
+}
+
+.video{
+    height: 100%;
+    width: 100%;
+}
+
+.profile-photo{
+    position: fixed;
+    width: 15%;
+    height: 27%;
+    top: 5vh;
+    left: 30%;
+    border: 2px solid rgb(241, 239, 239);
+    box-shadow: 10px 10px 68px 0px rgba(0,0,0,0.75);
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 .name{
-    position: absolute;
-    left: 55%;
-    margin-top: 10vh;
-    padding: 10px 10px;
-    background-color: indianred;
+    position: fixed;
+    top: 8vh;
+    left: 50%;
+    font-size: 40px;
+    text-shadow: 0px 2px 2px rgba(99, 79, 14, 0.6); 
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Allura', cursive;
 }
 
 .heading1{
-    position: absolute;
-    left: 55%;
-    margin-top: 16vh;
-    padding: 10px 10px;
-    background-color: indianred;
+    position: fixed;
+    top: 16vh;
+    left: 50%;
+    font-size: 40px;
+    text-shadow: 0px 2px 2px rgba(99, 79, 14, 0.6); 
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Allura', cursive;
 }
 
-.login{
-    position: absolute;
-    top: 10vh;
-    right: 5%;
-    padding: 0px 10px;
-    background-color: indianred;
+.heading2{
+    position: fixed;
+    top: 40vh;
+    left: 20%;
+    font-size: 40px;
+    color: rgb(71, 49, 19);
+    text-shadow: 0px 2px 2px rgba(99, 79, 14, 0.6); 
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Allura', cursive;
 }
 
-.function{
-    display: flex;
-    height: 75vh;
+.heading3{
+    position: fixed;
+    top: 40vh;
+    right: 20%;
+    font-size: 40px;
+    color: rgb(71, 49, 19);
+    text-shadow: 0px 2px 2px rgba(99, 79, 14, 0.6); 
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Allura', cursive;
 }
 
-.search{
-    height: 75vh;
-    width: 50%;
-    background-color: indigo;
+@-webkit-keyframes hvr1-wobble-horizontal {
+    16.65% {
+      -webkit-transform: translateX(8px);
+      transform: translateX(8px);
+    }
+    33.3% {
+      -webkit-transform: translateX(-6px);
+      transform: translateX(-6px);
+    }
+    49.95% {
+      -webkit-transform: translateX(4px);
+      transform: translateX(4px);
+    }
+    66.6% {
+      -webkit-transform: translateX(-2px);
+      transform: translateX(-2px);
+    }
+    83.25% {
+      -webkit-transform: translateX(1px);
+      transform: translateX(1px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  @keyframes hvr1-wobble-horizontal {
+    16.65% {
+      -webkit-transform: translateX(8px);
+      transform: translateX(8px);
+    }
+    33.3% {
+      -webkit-transform: translateX(-6px);
+      transform: translateX(-6px);
+    }
+    49.95% {
+      -webkit-transform: translateX(4px);
+      transform: translateX(4px);
+    }
+    66.6% {
+      -webkit-transform: translateX(-2px);
+      transform: translateX(-2px);
+    }
+    83.25% {
+      -webkit-transform: translateX(1px);
+      transform: translateX(1px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  .hvr1-wobble-horizontal {
+    display: inline-block;
+    vertical-align: middle;
+    border:1.5px solid rgb(218, 163, 62);
+    font-size: larger;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:rgb(218, 174, 79);
+    background-color: transparent;
+    text-decoration: none;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+  .hvr1-wobble-horizontal:hover, .hvr1-wobble-horizontal:focus, .hvr1-wobble-horizontal:active {
+    -webkit-animation-name: hvr1-wobble-horizontal;
+    animation-name: hvr1-wobble-horizontal;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
+
+.searchweekly{
+    position: fixed;
+    top: 60vh;
+    left: 22%;
+    padding:10px 10px;
 }
 
-.update{
-    height: 75vh;
-    width: 50%;
-    background-color: rgb(179, 120, 221);
+.searchbydate{
+    position: fixed;
+    top: 70vh;
+    left: 22%;
+    padding:10px 13px;
+}
+
+.updateweekly{
+    position: fixed;
+    top: 60vh;
+    right: 20%;
+    padding:10px 5px;
+}
+
+.updatebydate{
+    position: fixed;
+    top: 70vh;
+    right: 20%;
+    padding:10px 20px;
 }
