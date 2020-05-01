@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+.landing{
+  height: 100%;
+  width: 100%;
+  background-color: rgb(179, 218, 219);
+}
+
+.background-video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: auto;
+}
+
+.video{
+  height: 100%;
+  width: 100%;
+}
+
+.heading1{
+  position: fixed;
+  top: 3%;
+  left: 45%;
+  text-shadow: 0 0 8px rgb(8, 94, 89);
+  font-size: 50px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  font-family: cursive;
+  color: rgb(68, 170, 156);
+}
+
+.heading2{
+  position: fixed;
+  top: 15%;
+  left: 37%;
+  text-shadow: 0 0 8px rgb(44, 69, 70);
+  color: rgb(105, 197, 185);
+  font-size: 45px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-family: 'Amatic SC', cursive;
+}
+
+.auth{
+  position: fixed;
+  top: 65%;
+  left: 45%;
+}
