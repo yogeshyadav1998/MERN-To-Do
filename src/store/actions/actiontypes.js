@@ -1,0 +1,1 @@
+export const  TOGGLE_AUTHPAGE = 'TOGGLE_AUTH_PAGE';

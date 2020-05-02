@@ -1,11 +1,28 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
+import * as action from './store/actions/index';
 
+import Modal from './components/Modal/Modal';
+import Auth from './components/auth/auth';
 import './App.css';
 
 class App extends Component {
+  
+  toggleauthpage = () =>{
+    this.props.ontoggleauthpage()
+    console.log(this.props.authpage)
+  }
+
   render(){
+    let auth= null;
+        if(this.props.authpage){
+            auth= <Auth/>
+    }
     return(
       <div className="landing">
+        <Modal show={this.props.authpage} toggleauthpage={this.toggleauthpage}>
+          {auth}
+        </Modal>
         <div className="backgroud-video">
             <video autoPlay loop muted className="video" >
               <source src='v.mp4' type='video/mp4' />
@@ -18,11 +35,29 @@ class App extends Component {
           <p>Schedule Your Beautiful Life</p>
         </div>
         <div className="auth">
-          <button>Authenticate</button>
+          <button onClick={this.toggleauthpage}  className={ this.props.authpage? "disappear" : "authbutton hvr-pulse"}>Authenticate</button>
+        </div>
+        <div className="heading3">
+          <p>“The superior thing, in this as in other departments of life, was to be late. 
+            Lateness showed that serene contempt for the illusion we call time which is so necessary to ensure the respect of others and oneself.
+             Only the servile are punctual...”</p>
+          <p> ― Rose Macaulay , Mystery at Geneva</p>
         </div>
       </div>
     )
   }
 }
 
-export default App;
+const mapStateToProps = state =>{
+  return {
+    authpage: state.auth.authpage
+  }
+}
+
+const mapDispatchToProps = dispatch =>{
+  return{
+    ontoggleauthpage: () => dispatch(action.toggleauthpage())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
