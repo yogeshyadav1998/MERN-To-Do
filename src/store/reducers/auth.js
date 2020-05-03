@@ -2,7 +2,8 @@ import React from 'react';
 import * as actiontype from './../actions/actiontypes';
 
 const initialstate = {
-    authpage: false
+    authpage: false,
+    loading: false
 }
 
 const authreducer = (state=initialstate,action) =>{
@@ -11,6 +12,11 @@ const authreducer = (state=initialstate,action) =>{
         return{
             ...state,
             authpage: !state.authpage
+        }
+        case(actiontype.AUTH_START):
+        return{
+            ...state,
+            loading: true,
         }
         default:
             return state;

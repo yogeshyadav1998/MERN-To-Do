@@ -6,7 +6,7 @@ class auth extends Component {
     state={
         signup:false,
         name:'',
-        email:'',
+        username:'',
         password:''
     }
     
@@ -24,19 +24,10 @@ class auth extends Component {
     submithandler = () =>{
         console.log(this.state.email);
         if(this.state.signup){
-            const User = {
-                name:this.state.name,
-                email:this.state.email,
-                password:this.state.password
-            } 
-            // axios.post('/SignUp', User)
+            
         }
         else{
-            const User = {
-                email:this.state.email,
-                password:this.state.password
-            } 
-            // axios.post('/SignIn', User)
+            
         }
     }
 
@@ -56,9 +47,9 @@ class auth extends Component {
                 <br/>
                 <input
                     className="input"
-                    placeholder="E-mail"
-                    value = {this.state.email}
-                    onChange= {this.inputchangehandler('email')}
+                    placeholder="Username"
+                    value = {this.state.username}
+                    onChange= {this.inputchangehandler('username')}
                 ></input>
                 <br/>
                 <input
