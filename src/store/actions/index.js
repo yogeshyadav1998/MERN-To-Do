@@ -1,3 +1,4 @@
 export {
-    toggleauthpage
+    toggleauthpage,
+    auth
 } from './auth';

@@ -3,6 +3,9 @@ import * as actiontype from './../actions/actiontypes';
 
 const initialstate = {
     authpage: false,
+    name:null,
+    userid:null,
+    authenticated:false,
     loading: false
 }
 
@@ -17,6 +20,15 @@ const authreducer = (state=initialstate,action) =>{
         return{
             ...state,
             loading: true,
+        }
+        case(actiontype.AUTH_SUCCESS):
+        return{
+            ...state,
+            name: action.name,
+            authenticated: true,
+            authpage:false,
+            userid: action.userid,
+            loading: false
         }
         default:
             return state;

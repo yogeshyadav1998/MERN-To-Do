@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
+import * as action from './../../store/actions/index';
 
 import './auth.css'
+
+
 
 class auth extends Component {
     state={
@@ -15,20 +19,16 @@ class auth extends Component {
             return {signup: !prevstate.signup}
         })
     }
-
+ 
     inputchangehandler = input => event =>{
         event.preventDefault();
         this.setState({[input]: event.target.value});
     }
 
+    
     submithandler = () =>{
-        console.log(this.state.email);
-        if(this.state.signup){
-            
-        }
-        else{
-            
-        }
+        console.log(this.state.username);
+        this.props.onauth(this.state.name, this.state.username, this.state.password, this.state.signup);
     }
 
     render(){
@@ -54,7 +54,7 @@ class auth extends Component {
                 <br/>
                 <input
                     className="input"
-                    type="passwordss"
+                    type="password"
                     placeholder="Password"
                     value = {this.state.password}
                     onChange= {this.inputchangehandler('password')}
@@ -66,4 +66,17 @@ class auth extends Component {
     }
 }
 
-export default auth;
+const mapStateToProps = state => {
+    return{
+        loading: state.auth.loading,
+        authenticated: state.auth.authenticated
+    }
+}
+
+const mapDispatchToProps = dispatch =>{
+    return {
+        onauth: (name, username, password, signup) => dispatch(action.auth(name=name, username=username, password=password, signup=signup))
+    }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(auth);

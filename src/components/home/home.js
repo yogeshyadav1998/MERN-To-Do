@@ -1,17 +1,11 @@
 import React, { Component } from 'react';
 
-import { Icon} from 'antd';
+// import { Icon} from 'antd';
 
 class home extends Component{
     render(){
         return(
             <div className="home">
-                <div className="backgroud-video">
-                    <video autoPlay loop muted className="video" >
-                        <source src='videos/v.mp4' type='video/mp4' />
-                    </video>
-                </div>
-                <div className="content">
                     <div className="profile-photo">
                         <img src="https://images.pexels.com/photos/1615776/pexels-photo-1615776.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"></img>
                     </div>
@@ -25,17 +19,16 @@ class home extends Component{
                         <div className="home2">
                             <h4>Search Your Plans</h4>
                         </div>
-                        <button className="searchweekly hvr1-wobble-horizontal">This Week Plans <Icon type="right" /></button>
-                        <button className="searchbydate hvr1-wobble-horizontal">Search By Date <Icon type="right" /></button>
+                        <button className="searchweekly hvr1-wobble-horizontal">This Week Plans </button>
+                        <button className="searchbydate hvr1-wobble-horizontal">Search By Date </button>
                     </div>
                     <div className="update">
                         <div className="home3">
                             <h4>Update Your Plans</h4>
                         </div>
-                        <button className="updateweekly hvr1-wobble-horizontal"><Icon type="left" /> Update Week Plans </button>
-                        <button className="updatebydate hvr1-wobble-horizontal"><Icon type="left" /> Update By Date</button>
+                        <button className="updateweekly hvr1-wobble-horizontal">Update Week Plans </button>
+                        <button className="updatebydate hvr1-wobble-horizontal">Update By Date</button>
                     </div>
-                </div>
             </div>
         )
     }
