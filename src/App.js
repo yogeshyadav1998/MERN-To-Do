@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import * as action from './store/actions/index';
 import {connect} from 'react-redux';
-import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
+import {BrowserRouter as Router,Switch,Route, Redirect} from 'react-router-dom';
 
 import Landing from './components/landing/landing';
 import Home from './components/home/home';
 import './App.css';
+import landing from './components/landing/landing';
 
 class App extends Component {
 
@@ -19,7 +20,7 @@ class App extends Component {
       <div className="landing">
       <Switch>
         <Route path='/' exact component={Landing}/>
-        <Route path="/home" component={Home}/>
+        <Route path="/home" component={ this.props.authenticated? Home : landing}/>
       </Switch>
       </div>
       </Router>
