@@ -7,7 +7,7 @@ class Auth extends Component {
     render(){
         return(
             <div>
-                <Backdrop show={this.props.show} clicked={this.props.toggleauthpage}/>
+                <Backdrop show={this.props.show} clicked={this.props.togglepage}/>
                 <div className= {this.props.show ? "Modal" : ""}>
                     {this.props.children}
                 </div>

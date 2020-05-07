@@ -40,17 +40,32 @@
 .home2{
     position: absolute;
     left: 0%;
+    color: white;
+    font-size: 25px;
+    font-family: cursive;
+    text-shadow: 0 0 8px rgb(8, 94, 89);
+    -webkit-text-stroke: 2px black;
+}
+
+.home3{
+    position: absolute;
+    right: 0%;
+    color: white;
+    font-size: 25px;
+    font-family: cursive;
+    text-shadow: 0 0 8px rgb(8, 94, 89);
+    -webkit-text-stroke: 2px black;
 }
 
 .searchweekly{
     position: absolute;
-    top: 30%;
+    top: 33%;
     
 }
 
 .searchbydate{
     position: absolute;
-    top: 60%;
+    top: 66%;
 }
 
 .update{
@@ -63,13 +78,13 @@
 
 .updateweekly{
     position: absolute;
-    top: 30%;
+    top: 33%;
     right: 0%;
 }
 
 .updatebydate{
     position: absolute;
-    top: 60%;
+    top: 66%;
     right: 0%;
     padding-right: 30px;
 }
@@ -159,6 +174,7 @@
     animation-name: hvr-wobble-horizontal;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
+    outline: none;
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
     -webkit-animation-iteration-count: 1;

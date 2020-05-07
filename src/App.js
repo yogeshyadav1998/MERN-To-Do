@@ -19,8 +19,7 @@ class App extends Component {
       <Router>
       <div className="landing">
       <Switch>
-        <Route path='/' exact component={Landing}/>
-        <Route path="/home" component={ this.props.authenticated? Home : landing}/>
+        <Route path='/' exact component={ this.props.authenticated? Home : landing}/>
       </Switch>
       </div>
       </Router>

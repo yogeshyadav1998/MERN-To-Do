@@ -12,10 +12,6 @@ class landing extends Component {
       this.props.ontoggleauthpage()
       console.log(this.props.authpage)
     }
-
-    redirecttohome = () =>{
-      this.props.history.push('/home')
-    }
   
     render(){
       let auth= null;
@@ -24,7 +20,7 @@ class landing extends Component {
       }
       return(
         <div className="landing">
-          <Modal show={this.props.authpage} toggleauthpage={this.toggleauthpage}>
+          <Modal show={this.props.authpage} togglepage={this.toggleauthpage}>
             {auth}
           </Modal>
           <div className="backgroud-video">
@@ -40,7 +36,6 @@ class landing extends Component {
           </div>
           <div className="auth">
             <button onClick={this.toggleauthpage}  className={ this.props.authenticated ? "disappear" : this.props.authpage?  "disappear" : "authbutton hvr-pulse"}>Authenticate</button>
-            <button onClick={this.redirecttohome} className={this.props.authenticated? "homebutton hvr-pulse": "disappear"}>Home</button>
           </div>
           <div className="heading3">
             <p>“The superior thing, in this as in other departments of life, was to be late. 

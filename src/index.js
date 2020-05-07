@@ -9,9 +9,11 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import authreducer from './store/reducers/auth';
+import functionreducer from './store/reducers/function';
 
 const rootreducer = combineReducers({
-  auth: authreducer
+  auth: authreducer,
+  function: functionreducer
 })
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
