@@ -5,7 +5,7 @@ const initialstate = {
     authpage: false,
     name:null,
     userid:null,
-    authenticated:true,
+    authenticated:false,
     loading: false
 }
 
